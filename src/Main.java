@@ -16,7 +16,7 @@ public class Main {
 
         // 컴퓨터 랜덤 숫자 3자리 생성
         for(int i = 0; i < 3; i++){
-            comNumber[i] = (int)(Math.random()*10); // 0~9까지 숫자 중 랜덤 숫자 생성
+            comNumber[i] = (int)(Math.random() * 10); // 0~9까지 숫자 중 랜덤 숫자를 생성하고 int형으로 변환
             for(int j = 0; j < i; j++){
                 if(comNumber[i]==comNumber[j]){ // 중복된 숫자가 나온 경우 다시 생성
                     i--;
@@ -27,6 +27,7 @@ public class Main {
         for(int i = 0; i < 3; i++){
             System.out.print(comNumber[i]); // 컴퓨터 숫자 테스트 출력
         }
+        System.out.println();
         System.out.println("컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!");
 
         // 성공할때까지 반복하는 조건
@@ -59,8 +60,18 @@ public class Main {
                     }
                 }
             }
+
             // 볼, 스트라이크 출력
-            System.out.println(ball + "B" + strike + "S");
+            if((strike == 0 && ball == 0) || (strike != 0 && ball != 0)) {
+                System.out.println(ball + "B" + strike + "S");
+            }
+            else if(strike == 0) {
+                System.out.println(ball + "B"); // 스트라이크 0일때 볼만 출력
+            }
+            else if(ball == 0) {
+                System.out.println(strike + "S"); // 볼 0일때 스트라이크만 출력
+            }
+
             // 스트라이크가 3인 경우 게임 종료
             if(strike == 3){
                 System.out.println(count + "번만에 맞히셨습니다.\n게임을 종료합니다.");

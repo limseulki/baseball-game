@@ -68,7 +68,7 @@ public class Main {
             else if(strike == 0) {
                 System.out.println(ball + "B"); // 스트라이크 0일때 볼만 출력
             }
-            else if(ball == 0) {
+            else {
                 System.out.println(strike + "S"); // 볼 0일때 스트라이크만 출력
             }
 

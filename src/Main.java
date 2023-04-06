@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         // 변수 선언
         int[] comNumber = new int[3]; // 컴퓨터 숫자 배열
-        Integer[] playerNumber = new Integer[3]; // 플레이어 숫자 배열
+        int[] playerNumber = new int[3]; // 플레이어 숫자 배열
         int insertNumber; // 플레이어에게 입력받은 세자리 숫자
         int count = 0; // 시도 횟수 초기 선언
         int strike = 0; // 스트라이크 초기 선언
